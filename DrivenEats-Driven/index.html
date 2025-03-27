@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <title>DrivenEats</title>
+</head>
+<body>
+
+  <header>
+    <div class="topo">
+        <h1>DrivenEats</h1>
+        <h2>Sua comida em 6 minutos</h2>
+    </div>
+  </header>
+
+    <main>
+        <section class="menu">
+            <h1 class="titulo-prato">Primeiro, seu prato</h1>
+            <div class="comidas">
+                <div class="colunas-comida comida" onclick="selecionarComida(this)">
+                    <img src="imagens/pf_frango.jpg" alt="">
+                    <div class="info">
+                        <h2>Frango</h2>
+                        <h3>Acompanha arroz, feijão e salada</h3>
+                        <p>R$ 14,90</p>
+                    </div>
+                </div>
+                <div class="colunas-comida comida" onclick="selecionarComida(this)">
+                    <img src="imagens/pf_carne.jpg" alt="">
+                    <div class="info">
+                        <h2>Carne e ovo</h2>
+                        <h3>Acompanha arroz, feijão e salada</h3>
+                        <p>R$ 17,90</p>
+                    </div>
+                </div>
+                <div class="colunas-comida comida" style="margin-right: 0px;" onclick="selecionarComida(this)">
+                    <img src="imagens/pf_calabresa.png" alt="">
+                    <div class="info">
+                        <h2>Calabresa Acebolada</h2>
+                        <h3>Acompanha arroz, feijão e salada</h3>
+                        <p>R$ 16,90</p>
+                    </div>
+                </div>
+            </div>
+
+            <h1 class="titulo-bebida">Agora, sua bebida</h1>
+            <div class="bebidas">
+                <div class="colunas-bebida bebida" onclick="selecionarBebida(this)">
+                    <img src="imagens/coca.png" alt="">
+                    <div class="info">
+                        <h2>Coca-Cola</h2>
+                        <h3 style="margin-top:12px;">Lata 350ml</h3>
+                        <p style="margin-top: 0px;">R$ 6,90</p>
+                    </div>
+                </div>
+                <div class="colunas-bebida bebida" onclick="selecionarBebida(this)">
+                    <img src="imagens/fanta.png" alt="">
+                    <div class="info">
+                        <h2>Fanta</h2>
+                        <h3 style="margin-top:12px;">Lata 350ml</h3>
+                        <p style="margin-top: 0px;">R$ 4,90</p>
+                    </div>
+                </div>
+                <div class="colunas-bebida bebida" style="margin-right: 0px;" onclick="selecionarBebida(this)">
+                    <img src="imagens/suco.png" alt="">
+                    <div class="info">
+                        <h2>Suco de Laranja</h2>
+                        <h3 style="margin-top:12px;">500ml</h3>
+                        <p style="margin-top: 0px;">R$ 7,90</p>
+                    </div>
+                </div>
+            </div>
+
+            <h1 class="titulo-sobremesa">Por fim, sua sobremesa</h1>
+            <div class="sobremesas">
+                <div class="colunas-sobremesa sobremesa" onclick="selecionarSobremesa(this)">
+                    <img src="imagens/pudim.jpg" alt="">
+                    <div class="info">
+                        <h2>Pudim</h2>
+                        <h3 style="margin-top:12px;">Apenas um pudim</h3>
+                        <p style="margin-top: 0px;">R$ 7,90</p>
+                    </div>
+                </div>
+                <div class="colunas-sobremesa sobremesa" onclick="selecionarSobremesa(this)">
+                    <img src="imagens/mouse.jpg" alt="">
+                    <div class="info">
+                        <h2>Mousse</h2>
+                        <h3 style="margin-top:12px;">Cremoso, gostoso</h3>
+                        <p style="margin-top:0px;">R$ 6,90</p>
+                    </div>
+                </div>
+                <div class="colunas-sobremesa sobremesa" style="margin-right: 0px;" onclick="selecionarSobremesa(this)">
+                    <img src="imagens/brownie.jpg" alt="">
+                    <div class="info">
+                        <h2>Brownie</h2>
+                        <h3 style="margin-top:12px;">É um bolinho</h3>
+                        <p style="margin-top:0px;">R$ 4,90</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="final">
+            <div class="botao">
+                <button onclick="verificarPedido()">Selecione os 3 itens<br>para fechar o pedido</button>
+            </div>
+        </div>
+    </footer>
+
+    <main id="informacao" class="informacao escondido">
+        <div class="confirmacao">
+            <h1 style="margin-bottom:25px;">Confirme seu pedido</h1>
+            <ul id="detalhes-pedido">
+            </ul>
+            <p id="total-pedido" style="margin-top: 12px"><strong>Total: R$ 0,00</strong></p> 
+            <a href="#" class="confirmar-pedido" style="margin-top: 20px;" onclick="confirmarPedido()">Tudo certo, pode pedir!</a>
+            <button class="cancelar-botao" onclick="cancelar()">Cancelar pedido</button> 
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
